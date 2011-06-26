@@ -1,0 +1,41 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/_base.scss";
+@import "partials/_common_classes.scss";
+@import "partials/_common_mixins.scss";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+@import "blueprint/typography";
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+* {
+    font-family: monospace, sans-serif;
+    font-size: 12px;
+}
+
+form[name="canvasChooser"] {
+    fieldset {
+        border: 1px solid #000;
+        @include pad(10px, 15px);
+
+        legend {
+            font-size: 1.25em;
+            @include pad(0, 5px);
+        }
+
+        input[type="submit"], input[type="button"] {
+            @include margins(15px, 0, 0);
+            @include pad(2px, 4px);
+            font-size: 1.25em;
+        }
+    }
+}

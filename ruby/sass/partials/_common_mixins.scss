@@ -1,0 +1,25 @@
+//Some common classes to be used throughout
+
+@mixin pad($top, $right: false, $bottom: false, $left: false) {
+    @if $left {
+        padding: $top $right $bottom $left;
+    } @else if $bottom {
+        padding:  $top $right $bottom;
+    } @else if $right {
+        padding: $top $right;
+    } @else {
+        padding: $top;
+    }
+}
+
+@mixin margins($top, $right: false, $bottom: false, $left: false) {
+    @if $left {
+        margin: $top $right $bottom $left;
+    } @else if $bottom {
+        margin:  $top $right $bottom;
+    } @else if $right {
+        margin: $top $right;
+    } @else {
+        margin: $top;
+    }
+}

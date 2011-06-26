@@ -1,0 +1,108 @@
+/* line 4, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 18, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+.bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote, q, th, td, caption, table,
+div, span, object, iframe, p,
+pre, a, abbr, acronym, address,
+code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend,
+caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 21, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  quotes: "" "";
+}
+/* line 67, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 22, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  float: none !important;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 23, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, C:/Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.11.3/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 6, C:/Projects/SudokuPlugin/ruby/sass/partials/_common_classes.scss */
+.padded-content {
+  padding: 10px;
+}
+
+/* line 10, C:/Projects/SudokuPlugin/ruby/sass/partials/_common_classes.scss */
+.margined-content {
+  margin: 10px;
+}
+
+/* line 14, C:/Projects/SudokuPlugin/ruby/sass/partials/_common_classes.scss */
+.left {
+  display: inline;
+  float: left;
+}
+
+/* line 18, C:/Projects/SudokuPlugin/ruby/sass/partials/_common_classes.scss */
+.right {
+  display: inline;
+  float: right;
+}
+
+/* line 22, C:/Projects/SudokuPlugin/ruby/sass/partials/_common_classes.scss */
+.clear {
+  clear: both;
+}
+
+/* line 20, ../../ruby/sass/screen.scss */
+* {
+  font-family: monospace, sans-serif;
+  font-size: 12px;
+}
+
+/* line 26, ../../ruby/sass/screen.scss */
+form[name="canvasChooser"] fieldset {
+  border: 1px solid #000;
+  padding: 10px 15px;
+}
+/* line 30, ../../ruby/sass/screen.scss */
+form[name="canvasChooser"] fieldset legend {
+  font-size: 1.25em;
+  padding: 0 5px;
+}
+/* line 35, ../../ruby/sass/screen.scss */
+form[name="canvasChooser"] fieldset input[type="submit"], form[name="canvasChooser"] fieldset input[type="button"] {
+  margin: 15px 0 0;
+  padding: 2px 4px;
+  font-size: 1.25em;
+}

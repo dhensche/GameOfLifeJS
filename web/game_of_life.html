@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game of Life</title>
+        <script src="js/lib/jquery-1.6.1.min.js"></script>
+        <script src="js/lib/jcanvas.min.js"></script>
+        <script src="js/lib/jquery.placeholder.js"></script>
+        <script src="js/lib/jquery.validationEngine-en.js"></script>
+        <script src="js/lib/jquery.validationEngine.js"></script>
+
+        <script src="js/game_of_life.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="css/validationEngine.jquery.css" />
+        <link type="text/css" rel="stylesheet" href="css/screen.css" />
+    </head>
+    <body>
+        <section class="padded-content">
+            <canvas id="testC"></canvas>
+            <form name="canvasChooser" class="padded-content left" id="canvasChooser">
+                <fieldset>
+                    <legend>Game of Life Options</legend>
+                    <input type="text" placeholder="Number of X cells" id="xCount" name="xCount"
+                           class="validate[custom[number]],min[0],max[1000]] left" />
+                    <input type="text" placeholder="Number of Y cells" id="yCount" name="yCount"
+                           class="validate[custom[number]],min[0],max[1000]] left" />
+                    <input type="text" placeholder="Size of cells" id="cellSize" name="cellSize"
+                           class="validate[custom[number]],min[0],max[100]] left" />
+                    <input type="text" placeholder="Cell Padding" id="cellPadding" name="cellPadding"
+                           class="validate[custom[number]],min[0],max[10]] left" />
+                    <input type="text" placeholder="Generation Delay" id="delay" name="delay"
+                           class="validate[custom[number]],min[1]] clear left" />
+                    <input type="text" placeholder="Dead Color" id="deadColor" name="deadColor"
+                           class="validate[custom[color]] left" />
+                    <input type="text" placeholder="Living Color" id="liveColor" name="liveColor"
+                           class="validate[custom[color]] left" />
+                    <div style="display: inline; padding-top: .5em; padding-left: .5em;" class="left">Generation: <span id="gen">0</span></div>
+                    <input type="submit" value="Create Board" class="clear left" />
+                    <input type="button" value="Start Life" class="left" id="run" />
+                    <input type="button" value="Stop Life" class="left" id="stop" />
+                    <input type="button" value="Clear Board" class="left" id="clear" />
+                </fieldset>
+
+            </form>
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+@import "compass/utilities/general/float";
+@import "_common_mixins.scss";
+
+
+
+.padded-content {
+    @include pad(10px);
+}
+
+.margined-content {
+    @include margins(10px);
+}
+
+.left {
+    @include float-left;
+}
+
+.right {
+    @include float-right;
+}
+
+.clear {
+    clear: both;
+}
