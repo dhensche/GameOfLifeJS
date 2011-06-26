@@ -1,48 +1,34 @@
-$(function() {
-    //init placeholders
-    $('[placeholder]').placeholder();
-
-    var $canvas = $('canvas#testC'),
-        form = $('form#canvasChooser'),
-        run = function() {
-            $canvas.gameOfLife('run');
-        };
-
-    form.validationEngine('attach');
-    form.submit(function() {
-        $canvas.gameOfLife($(this).serializeObject());
-        return false;
-    });
-
-    $canvas.bind('generation', function(e, gen) {
-        $('span#gen').text(gen);
-    });
-
-    $('input#clear').click(function() {
-        $canvas.gameOfLife('clear');
-    });
-
-    $('input#run').click(function() {
-        $canvas.gameOfLife('run');
-    });
-
-    $('input#stop').click(function() {
-        $canvas.gameOfLife('stop');
-    })
-});
-
+/**
+ * Create a canvas object and then call gameOFLife on this object. This will create a default object. Options for
+ * creation are:
+ *
+ * xCount: The number of cells in the x-direction (20)
+ * yCount: The number of cells in the y-direction (20)
+ * cellSize: The height and width of each cell in pixels (20)
+ * cellPadding: The number of pixels between each cell (2)
+ * delay: How long until the next generation is calculated in milliseconds (250)
+ * liveColor: The color of the living cells
+ * deadColor: The color of the dead cells
+ *
+ * Functions are:
+ * init: This is the creator
+ * run: will start the game (or continue the game if you have previously stopped it)
+ * stop: will stop the game
+ * clear: will clear the board and restart the generations to zero
+ * generation: will provide you the current generation
+ *
+ * -- all other functions are internal
+ *
+ * Events fired:
+ *
+ * generation: This event is fired with an extra parameter (the current generation) whenever a new generation is created.
+ * To bind to this event use the following:
+ *
+ *      $(game_of_life_object).bind('generation', function(e, gen) {
+ *          alert(gen);// will alert the current generation
+ *      });
+ */
 (function($) {
-    $.fn.serializeObject = function() {
-        var arr = this.serializeArray(),
-            obj = {};
-
-        $.each(arr, function(i, elem) {
-            if (elem.value)
-                obj[elem.name] = elem.value;
-        });
-        return obj;
-    };
-
     var gol_methods = {
         init: function(values) {
             this.clearCanvas();
@@ -86,7 +72,7 @@ $(function() {
                     values.lifeMap = newLifeMap;
                     values.generation++;
                     that.trigger('generation', values.generation);
-                    
+
                 }, values.delay);
         },
         _update: function(newLifeMap) {
