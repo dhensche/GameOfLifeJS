@@ -25,7 +25,7 @@
  * To bind to this event use the following:
  *
  *      $(game_of_life_object).bind('generation', function(e, gen) {
- *          alert(gen);// will alert the current generation on each fire
+ *          alert(gen);// will alert the current generation
  *      });
  */
 (function($) {
